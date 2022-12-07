@@ -16,5 +16,6 @@ private:
     string file;
 public:
     Knn(int k, string file, string disName);
+
 };
 #endif //KNNREP_KNN_H

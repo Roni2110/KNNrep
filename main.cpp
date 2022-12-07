@@ -1,4 +1,5 @@
 #include <string>
+#include <string.h>
 #include <iostream>
 #include <vector>
 #include <float.h>
@@ -6,7 +7,7 @@
 #include <cmath>
 #include <cstdlib>
 #include "DistanceClass.h"
-
+#include "Knn.h"
 
 using namespace std;
 
@@ -62,10 +63,34 @@ void checkingInput(string str1, string str2) {
 }
 
 /**
+ * this function checks that the arguments that the user entered to main are valids.
+ * if not - it prints an error to the user.
+ * @param argv - the arguments that the user entered.
+ */
+void checkingArgv(char *argv[]) {
+    if((stoi(argv[1])<=0) ||
+            ((strcmp(argv[3],"AUC")!=0) && (strcmp(argv[3],"MAN")!=0) && (strcmp(argv[3],"CHB")!=0)
+            && (strcmp(argv[3],"CAN")!=0) && (strcmp(argv[3],"MIN")!=0))) {
+        cout << "Input not valid!" << endl;
+        exit(0);
+    }
+}
+
+/**
  * this if the main function. this function calls the other functions and checks if the input does not cause an overflow.
  * @return 0 if code works.
  */
-int main () {
+int main (int argc, char *argv[]) {
+    checkingArgv(argv);
+/*    cout << stoi(argv[1]) << endl;
+    cout << argv[2] << endl;
+    cout << argv[3] << endl;*/
+    int k = stoi(argv[1]);
+    string file = argv[2];
+    string dis = argv[3];
+/*    cout << k << endl;
+    cout << file << endl;
+    cout << dis << endl;*/
     string input1;
     string input2;
     getline(cin,input1);
@@ -77,6 +102,6 @@ int main () {
         input2 = input2.substr(0, sizeof(double ));
     }
     checkingInput(input1,input2);
-
+    Knn(k,file,dis);
     return 0;
 }
