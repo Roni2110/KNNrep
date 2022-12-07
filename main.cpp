@@ -5,7 +5,7 @@
 #include <sstream>
 #include <cmath>
 #include <cstdlib>
-#include "Distance.h"
+#include "DistanceClass.h"
 
 using namespace std;
 
@@ -24,16 +24,16 @@ void checkingVec(vector<double>vec1, vector<double> vec2) {
         cout << "No parameters added!" << endl;
         exit(0);
     } else {
-        getEucDis(vec1, vec2);
-        getManDis(vec1, vec2);
-        getChebDis(vec1, vec2);
-        getCanDis(vec1, vec2);
-        getMinkDis(vec1, vec2);
+        DistanceClass::getEucDis(vec1, vec2);
+        DistanceClass::getManDis(vec1, vec2);
+        DistanceClass::getChebDis(vec1, vec2);
+        DistanceClass::getCanDis(vec1, vec2);
+        DistanceClass::getMinkDis(vec1, vec2);
     }
 }
 
 /**
- * this funtion checks that all the values in the vectors are numbers. if not - it prints an error to the user.
+ * this function checks that all the values in the vectors are numbers. if not - it prints an error to the user.
  * @param str1 - the values of the first vector.
  * @param str2 - the values of the second vector.
  */
@@ -61,7 +61,7 @@ void checkingInput(string str1, string str2) {
 }
 
 /**
- * this if the main function. this function calls the other funtions and checks if the input does not cause an overflow.
+ * this if the main function. this function calls the other functions and checks if the input does not cause an overflow.
  * @return 0 if code works.
  */
 int main () {
