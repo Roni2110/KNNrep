@@ -1,0 +1,3 @@
+/mnt/c/Users/omern/CLionProjects/KNNrep/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/omern/CLionProjects/KNNrep/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/omern/CLionProjects/KNNrep/cmake-build-debug/CMakeFiles/KNNrep.dir
