@@ -5,7 +5,7 @@
 #include <sstream>
 #include <cmath>
 #include <cstdlib>
-#include "Distance.h"
+#include "DistanceClass.h"
 
 
 using namespace std;
@@ -25,11 +25,11 @@ void checkingVec(vector<double>vec1, vector<double> vec2) {
         cout << "No parameters added!" << endl;
         exit(0);
     } else {
-        getEucDis(vec1, vec2);
-        getManDis(vec1, vec2);
-        getChebDis(vec1, vec2);
-        getCanDis(vec1, vec2);
-        getMinkDis(vec1, vec2);
+        DistanceClass::getEucDis(vec1, vec2);
+        DistanceClass::getManDis(vec1, vec2);
+        DistanceClass::getChebDis(vec1, vec2);
+        DistanceClass::getCanDis(vec1, vec2);
+        DistanceClass::getMinkDis(vec1, vec2);
     }
 }
 

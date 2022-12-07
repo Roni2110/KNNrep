@@ -20,8 +20,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cf34b7a-f25c-41ea-9319-d9a003fdc103" name="Changes" comment="commit workspace">
+    <list default="true" id="06fb81d9-ca33-48b5-bf55-130070094d5b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DistanceClass.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DistanceClass.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Knn.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Knn.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distance.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CMakeCCompiler.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.17.5/CMakeCXXCompiler.cmake" beforeDir="false" />
@@ -61,6 +68,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -114,14 +126,6 @@
       <workItem from="1670431469447" duration="66000" />
       <workItem from="1670431540958" duration="612000" />
     </task>
-    <task id="LOCAL-00001" summary="commit workspace">
-      <created>1670436125188</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1670436125188</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,26 +136,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="knnBranch" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit workspace" />
   </component>
 </project>
