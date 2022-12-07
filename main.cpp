@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include "Distance.h"
 
+
 using namespace std;
 
 /**
@@ -33,7 +34,7 @@ void checkingVec(vector<double>vec1, vector<double> vec2) {
 }
 
 /**
- * this funtion checks that all the values in the vectors are numbers. if not - it prints an error to the user.
+ * this function checks that all the values in the vectors are numbers. if not - it prints an error to the user.
  * @param str1 - the values of the first vector.
  * @param str2 - the values of the second vector.
  */
@@ -61,7 +62,7 @@ void checkingInput(string str1, string str2) {
 }
 
 /**
- * this if the main function. this function calls the other funtions and checks if the input does not cause an overflow.
+ * this if the main function. this function calls the other functions and checks if the input does not cause an overflow.
  * @return 0 if code works.
  */
 int main () {
@@ -76,5 +77,6 @@ int main () {
         input2 = input2.substr(0, sizeof(double ));
     }
     checkingInput(input1,input2);
+
     return 0;
 }
