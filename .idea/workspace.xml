@@ -20,7 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fb81d9-ca33-48b5-bf55-130070094d5b" name="Changes" comment="">
+    <list default="true" id="06fb81d9-ca33-48b5-bf55-130070094d5b" name="Changes" comment="commit cmake changes">
       <change afterPath="$PROJECT_DIR$/DistanceClass.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/DistanceClass.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Knn.cpp" afterDir="false" />
@@ -141,5 +141,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit workspace" />
+    <MESSAGE value="commit cmake changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit cmake changes" />
   </component>
 </project>
