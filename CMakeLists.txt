@@ -6,6 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(KNNrep
-        Distance.cpp
-        Distance.h
-        main.cpp)
+        main.cpp Knn.cpp Knn.h DistanceClass.cpp DistanceClass.h)
