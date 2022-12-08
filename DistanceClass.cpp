@@ -1,8 +1,3 @@
-//
-// Created by danas on 07/12/2022.
-//
-
-
 #include <vector>
 #include <iostream>
 #include <cstdlib>
@@ -19,7 +14,7 @@ int p = 2;
  * @param v1 - the first vector.
  * @param v2 - the second vector.
  */
-    void DistanceClass::getEucDis(vector<double> v1, vector<double> v2) {
+double DistanceClass::getEucDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int power = 2;
     int i;
@@ -29,14 +24,16 @@ int p = 2;
         sum += pow(v1.at(i) - v2.at(i), power);
     }
     res = sqrt(sum);
-    if (res != (int) res) {
-        cout.precision(value);
-        cout << fixed << res << endl;
-    } else {
-        value = 1;
-        cout.precision(value);
-        cout << fixed << res << endl;
-    }
+//    if (res != (int) res) {
+//
+//        cout.precision(value);
+//        cout << fixed << res << endl;
+//    } else {
+//        value = 1;
+//        cout.precision(value);
+//        cout << fixed << res << endl;
+//    }
+    return res;
 }
 
 /**
@@ -44,7 +41,7 @@ int p = 2;
  * @param v1 - the first vector.
  * @param v2 - the second vector.
  */
-    void DistanceClass::getCanDis(vector<double> v1, vector<double> v2) {
+double DistanceClass::getCanDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int i;
     int value = 16;
@@ -54,14 +51,7 @@ int p = 2;
         }
         sum += (abs(v1.at(i) - v2.at(i)) / (abs(v1.at(i)) + abs(v2.at(i))));
     }
-    if (sum != (int) sum) {
-        cout.precision(value);
-        cout << fixed << sum << endl;
-    } else {
-        value = 1;
-        cout.precision(value);
-        cout << fixed << sum << endl;
-    }
+    return sum;
 }
 
 /**
@@ -69,7 +59,7 @@ int p = 2;
  * @param v1 - the first vector.
  * @param v2 - the second vector.
  */
-    void DistanceClass::getChebDis(vector<double> v1, vector<double> v2) {
+double DistanceClass::getChebDis(vector<double> v1, vector<double> v2) {
     int i;
     int value = 16;
     double max = abs(v1.at(0) - v2.at(0));
@@ -78,14 +68,7 @@ int p = 2;
             max = abs(v1.at(i) - v2.at(i));
         }
     }
-    if (max != (int) max) {
-        cout.precision(value);
-        cout << fixed << max << endl;
-    } else {
-        value = 1;
-        cout.precision(value);
-        cout << fixed << max << endl;
-    }
+    return max;
 }
 
 /**
@@ -93,21 +76,14 @@ int p = 2;
  * @param v1 - the first vector.
  * @param v2 - the second vector.
  */
-    void DistanceClass::getManDis(vector<double> v1, vector<double> v2) {
+double DistanceClass::getManDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int i;
     int value = 16;
     for (i = 0; i < v1.size(); i++) {
         sum += abs((v1.at(i) - v2.at(i)));
     }
-    if (sum != (int) sum) {
-        cout.precision(value);
-        cout << fixed << sum << endl;
-    } else {
-        value = 1;
-        cout.precision(value);
-        cout << fixed << sum << endl;
-    }
+    return sum;
 }
 
 /**
@@ -115,7 +91,7 @@ int p = 2;
  * @param v1 - the first vector.
  * @param v2 - the second vector.
  */
-    void DistanceClass::getMinkDis(vector<double> v1, vector<double> v2) {
+double DistanceClass::getMinkDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int i;
     int value = 16;
@@ -124,14 +100,5 @@ int p = 2;
         sum += pow(abs(v1.at(i) - v2.at(i)), p);
     }
     res = pow(sum, (1.0 / p));
-    if (res != (int) res) {
-        cout.precision(value);
-        cout << fixed << res << endl;
-    } else {
-        value = 1;
-        cout.precision(value);
-        cout << fixed << res << endl;
-    }
+    return res;
 }
-
-
