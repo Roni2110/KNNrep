@@ -1,2 +1,6 @@
 /cmake-build-debug/Testing/
-/cmake-build-debug/Testing/
+/.idea/workspace.xml
+/.idea/vcs.xml
+/.idea/modules.xml
+/.idea/misc.xml
+/.idea/KNNrep.iml
