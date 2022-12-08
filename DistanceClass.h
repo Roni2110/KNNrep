@@ -10,11 +10,11 @@
 
 class DistanceClass{
 public:
-    static void getEucDis(std::vector <double> v1, std::vector <double> v2);
-    static void getCanDis(std::vector <double> v1, std::vector <double> v2);
-    static void getChebDis(std::vector<double> v1, std::vector<double> v2);
-    static void getManDis(std::vector<double> v1, std::vector<double> v2);
-    static void getMinkDis(std::vector<double> v1, std::vector<double> v2);
+    static double getEucDis(std::vector <double> v1, std::vector <double> v2);
+    static double getCanDis(std::vector <double> v1, std::vector <double> v2);
+    static double getChebDis(std::vector<double> v1, std::vector<double> v2);
+    static double getManDis(std::vector<double> v1, std::vector<double> v2);
+    static double getMinkDis(std::vector<double> v1, std::vector<double> v2);
 };
 
 

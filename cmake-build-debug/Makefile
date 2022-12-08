@@ -143,32 +143,59 @@ KNNrep/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/build
 .PHONY : KNNrep/fast
 
-Distance.o: Distance.cpp.o
+DistanceClass.o: DistanceClass.cpp.o
 
-.PHONY : Distance.o
+.PHONY : DistanceClass.o
 
 # target to build an object file
-Distance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/Distance.cpp.o
-.PHONY : Distance.cpp.o
+DistanceClass.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/DistanceClass.cpp.o
+.PHONY : DistanceClass.cpp.o
 
-Distance.i: Distance.cpp.i
+DistanceClass.i: DistanceClass.cpp.i
 
-.PHONY : Distance.i
+.PHONY : DistanceClass.i
 
 # target to preprocess a source file
-Distance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/Distance.cpp.i
-.PHONY : Distance.cpp.i
+DistanceClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/DistanceClass.cpp.i
+.PHONY : DistanceClass.cpp.i
 
-Distance.s: Distance.cpp.s
+DistanceClass.s: DistanceClass.cpp.s
 
-.PHONY : Distance.s
+.PHONY : DistanceClass.s
 
 # target to generate assembly for a file
-Distance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/Distance.cpp.s
-.PHONY : Distance.cpp.s
+DistanceClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/DistanceClass.cpp.s
+.PHONY : DistanceClass.cpp.s
+
+Knn.o: Knn.cpp.o
+
+.PHONY : Knn.o
+
+# target to build an object file
+Knn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/Knn.cpp.o
+.PHONY : Knn.cpp.o
+
+Knn.i: Knn.cpp.i
+
+.PHONY : Knn.i
+
+# target to preprocess a source file
+Knn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/Knn.cpp.i
+.PHONY : Knn.cpp.i
+
+Knn.s: Knn.cpp.s
+
+.PHONY : Knn.s
+
+# target to generate assembly for a file
+Knn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/KNNrep.dir/build.make CMakeFiles/KNNrep.dir/Knn.cpp.s
+.PHONY : Knn.cpp.s
 
 main.o: main.cpp.o
 
@@ -206,9 +233,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... KNNrep"
-	@echo "... Distance.o"
-	@echo "... Distance.i"
-	@echo "... Distance.s"
+	@echo "... DistanceClass.o"
+	@echo "... DistanceClass.i"
+	@echo "... DistanceClass.s"
+	@echo "... Knn.o"
+	@echo "... Knn.i"
+	@echo "... Knn.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
