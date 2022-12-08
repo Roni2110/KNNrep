@@ -84,10 +84,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/Distance.cpp">
+		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/DistanceClass.cpp">
 			<Option target="KNNrep"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/Distance.h">
+		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/DistanceClass.h">
+			<Option target="KNNrep"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/Knn.cpp">
+			<Option target="KNNrep"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/Knn.h">
 			<Option target="KNNrep"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/omern/CLionProjects/KNNrep/main.cpp">

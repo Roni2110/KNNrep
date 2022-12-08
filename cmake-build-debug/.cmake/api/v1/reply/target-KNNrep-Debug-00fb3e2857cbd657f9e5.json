@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "KNNrep.exe"
-		},
-		{
-			"path" : "KNNrep.pdb"
+			"path" : "KNNrep"
 		}
 	],
 	"backtrace" : 1,
@@ -45,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g  "
 				},
 				{
 					"fragment" : "-std=gnu++14"
@@ -55,18 +52,10 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/Users/danas/CLionProjects/KNNrep/."
+					"path" : "/mnt/c/Users/omern/CLionProjects/KNNrep/."
 				}
 			],
 			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "14"
-			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -87,16 +76,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "KNNrep",
-	"nameOnDisk" : "KNNrep.exe",
+	"nameOnDisk" : "KNNrep",
 	"paths" : 
 	{
 		"build" : ".",
