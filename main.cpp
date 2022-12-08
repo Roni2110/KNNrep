@@ -40,7 +40,7 @@ using namespace std;
  * @param str1 - the values of the first vector.
  * @param str2 - the values of the second vector.
  */
-void checkingInput(string str1) {
+vector<double> checkingInput(string str1) {
     vector<double> v1;
     double num;
     stringstream stringstream1(str1);
@@ -55,6 +55,7 @@ void checkingInput(string str1) {
         cout << "No parameters added!" << endl;
         exit(0);
     }
+    return v1;
 }
 
 /**
@@ -76,6 +77,7 @@ void checkingArgv(char *argv[]) {
  * @return 0 if code works.
  */
 int main (int argc, char *argv[]) {
+    vector<double> vecInput;
     checkingArgv(argv);
     int k = stoi(argv[1]);
     string file = argv[2];
@@ -85,7 +87,7 @@ int main (int argc, char *argv[]) {
     if((double)input1.size() >= log(DBL_MAX) - 1) {
         input1 = input1.substr(0, sizeof(double));
     }
-    checkingInput(input1);
-    Knn(k,file,dis);
+    vecInput = checkingInput(input1);
+    Knn* knn = new Knn(k,file,dis, vecInput);
     return 0;
 }
