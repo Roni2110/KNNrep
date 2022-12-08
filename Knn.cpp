@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -61,5 +62,9 @@ void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
     for(int i = 0; i < d1.size(); i++) {
         resVec.emplace_back(d1.at(i), s1.at(i));
     }
+}
+
+void Knn::sortingByDistance(vector<pair<double,string>> resVec){
+    sort(resVec.begin(), resVec.end());
 }
 
