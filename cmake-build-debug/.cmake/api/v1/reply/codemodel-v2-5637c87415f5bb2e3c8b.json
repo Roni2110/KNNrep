@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.17"
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "KNNrep::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-KNNrep-Debug-271806dd38fcbe4f8898.json",
+					"jsonFile" : "target-KNNrep-Debug-00fb3e2857cbd657f9e5.json",
 					"name" : "KNNrep",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/danas/CLionProjects/KNNrep/cmake-build-debug",
-		"source" : "C:/Users/danas/CLionProjects/KNNrep"
+		"build" : "/mnt/c/Users/omern/CLionProjects/KNNrep/cmake-build-debug",
+		"source" : "/mnt/c/Users/omern/CLionProjects/KNNrep"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 0
 	}
 }

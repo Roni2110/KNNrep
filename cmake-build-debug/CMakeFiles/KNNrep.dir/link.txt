@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/KNNrep.dir/main.cpp.o CMakeFiles/KNNrep.dir/Knn.cpp.o CMakeFiles/KNNrep.dir/DistanceClass.cpp.o  -o KNNrep 
