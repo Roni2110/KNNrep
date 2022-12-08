@@ -46,7 +46,7 @@ void Knn::uploadFiles(std::string stringPath) {
             res = DistanceClass::getCanDis(temp, vecInput);
             doubleVec.push_back(res);
         } else {
-            res = DistanceClass::getEucDis(temp, vecInput);
+            res = DistanceClass::getMinkDis(temp, vecInput);
             doubleVec.push_back(res);
         }
         if(doubleVec.size() != vecInput.size()) {
