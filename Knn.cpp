@@ -32,6 +32,10 @@ void Knn::uploadFiles(std::string stringPath) {
                 temp.push_back(stod(tempByComma));
             }
         }
+        if(temp.size() != vecInput.size()) {
+            cout << "vectors are not in the same size!" << endl;
+            exit(0);
+        }
         //calling the distance method according to disName
         if(this->disName == "MAN") {
             res = DistanceClass::getManDis(temp,vecInput);
@@ -49,12 +53,8 @@ void Knn::uploadFiles(std::string stringPath) {
             res = DistanceClass::getMinkDis(temp, vecInput);
             doubleVec.push_back(res);
         }
-        if(doubleVec.size() != vecInput.size()) {
-            cout << "vectors are not in the same size!" << endl;
-            exit(0);
-        }
-        pushingToPairs(doubleVec, stringVec);
     }
+    pushingToPairs(doubleVec, stringVec);
 }
 
 void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {

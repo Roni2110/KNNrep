@@ -89,5 +89,6 @@ int main (int argc, char *argv[]) {
     }
     vecInput = checkingInput(input1);
     Knn* knn = new Knn(k,file,dis, vecInput);
+    knn->uploadFiles(file);
     return 0;
 }
