@@ -51,7 +51,7 @@ void checkingInput(string str1) {
         cout << "Input not valid!" << endl;
         exit(0);
     }
-    if (v1.size() == 0) {
+    if (v1.empty()) {
         cout << "No parameters added!" << endl;
         exit(0);
     }
