@@ -49,13 +49,6 @@ cmake_ninja_workdir = C$:/Users/danas/CLionProjects/KNNrep/cmake-build-debug/
 
 build cmake_object_order_depends_target_KNNrep: phony || CMakeFiles/KNNrep.dir
 
-build CMakeFiles/KNNrep.dir/Distance.cpp.obj: CXX_COMPILER__KNNrep_Debug C$:/Users/danas/CLionProjects/KNNrep/Distance.cpp || cmake_object_order_depends_target_KNNrep
-  DEP_FILE = CMakeFiles\KNNrep.dir\Distance.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  INCLUDES = -IC:/Users/danas/CLionProjects/KNNrep/.
-  OBJECT_DIR = CMakeFiles\KNNrep.dir
-  OBJECT_FILE_DIR = CMakeFiles\KNNrep.dir
-
 build CMakeFiles/KNNrep.dir/main.cpp.obj: CXX_COMPILER__KNNrep_Debug C$:/Users/danas/CLionProjects/KNNrep/main.cpp || cmake_object_order_depends_target_KNNrep
   DEP_FILE = CMakeFiles\KNNrep.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
@@ -85,7 +78,7 @@ build CMakeFiles/KNNrep.dir/DistanceClass.cpp.obj: CXX_COMPILER__KNNrep_Debug C$
 #############################################
 # Link the executable KNNrep.exe
 
-build KNNrep.exe: CXX_EXECUTABLE_LINKER__KNNrep_Debug CMakeFiles/KNNrep.dir/Distance.cpp.obj CMakeFiles/KNNrep.dir/main.cpp.obj CMakeFiles/KNNrep.dir/Knn.cpp.obj CMakeFiles/KNNrep.dir/DistanceClass.cpp.obj
+build KNNrep.exe: CXX_EXECUTABLE_LINKER__KNNrep_Debug CMakeFiles/KNNrep.dir/main.cpp.obj CMakeFiles/KNNrep.dir/Knn.cpp.obj CMakeFiles/KNNrep.dir/DistanceClass.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\KNNrep.dir
