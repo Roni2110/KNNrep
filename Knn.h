@@ -24,6 +24,7 @@ public:
     Knn(int k, string file, string disName, vector<double> v1);
     void uploadFiles(string stringPath);
     void pushingToPairs(vector<double> d1, vector<string> s1);
+    void sortingByDistance(vector<pair<double,string>> resVec);
 
 };
 #endif //KNNREP_KNN_H
