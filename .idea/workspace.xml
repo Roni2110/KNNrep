@@ -20,7 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06fb81d9-ca33-48b5-bf55-130070094d5b" name="Changes" comment="commit changes for pulling" />
+    <list default="true" id="06fb81d9-ca33-48b5-bf55-130070094d5b" name="Changes" comment="adding vec to knn" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670497528112</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit changes for pulling">
+      <created>1670497548146</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670497548146</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adding vec to knn">
+      <created>1670498139164</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670498139164</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +131,7 @@
     <MESSAGE value="commit workspace" />
     <MESSAGE value="commit cmake changes" />
     <MESSAGE value="commit changes for pulling" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit changes for pulling" />
+    <MESSAGE value="adding vec to knn" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding vec to knn" />
   </component>
 </project>
