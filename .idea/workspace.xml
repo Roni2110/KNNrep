@@ -20,9 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8cf34b7a-f25c-41ea-9319-d9a003fdc103" name="Changes" comment="changes in main to one vector">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8cf34b7a-f25c-41ea-9319-d9a003fdc103" name="Changes" comment="commit for merging" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670488491897</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit for merging">
+      <created>1670496308113</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670496308113</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +139,7 @@
     <MESSAGE value="commit cmake changes" />
     <MESSAGE value="adding arguments to main and checking them" />
     <MESSAGE value="changes in main to one vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in main to one vector" />
+    <MESSAGE value="commit for merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit for merging" />
   </component>
 </project>
