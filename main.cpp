@@ -64,7 +64,7 @@ int main (int argc, char *argv[]) {
         input1 = input1.substr(0, sizeof(double));
     }
     vecInput = checkingInput(input1);
-    Knn* knn = new Knn(k,file,dis, vecInput);
+    Knn* knn = new Knn(k,dis, vecInput);
     knn->uploadFiles(file);
     return 0;
 }

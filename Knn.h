@@ -18,7 +18,6 @@ private:
     vector<double> doubleVec;
     vector<string> stringVec;
     vector<pair<double,string>> resVec;
-    DistanceClass distanceClass;
 
 public:
     Knn(int k, string disName, vector<double> v1);
