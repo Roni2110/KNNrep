@@ -8,6 +8,13 @@
 
 using namespace std;
 
+/**
+ *
+ * @param k
+ * @param file
+ * @param disName
+ * @param v1
+ */
 Knn::Knn(int k, string file, string disName, vector<double> v1) {
     this->k = k;
     this->file = file;
@@ -15,6 +22,9 @@ Knn::Knn(int k, string file, string disName, vector<double> v1) {
     this->vecInput = v1;
 }
 
+/**
+ *
+ */
 void Knn::uploadFiles() {
     double res;
     string tempByLine, tempByComma;
@@ -60,6 +70,11 @@ void Knn::uploadFiles() {
     pushingToPairs(doubleVec, stringVec);
 }
 
+/**
+ *
+ * @param d1
+ * @param s1
+ */
 void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
     for(int i = 0; i < d1.size(); i++) {
         resVec.emplace_back(d1.at(i), s1.at(i));
@@ -67,6 +82,10 @@ void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
     getSignificant(resVec);
 }
 
+/**
+ *
+ * @param pairs
+ */
 void Knn::getSignificant(vector<pair<double, string>> pairs) {
     int i;
     std::map<string, double> map;
