@@ -11,30 +11,6 @@
 
 using namespace std;
 
-// /**
-//* this function checks that the two vectors are at the same size.
-//* also, this function checks that that the vectors are not empty - that their size is not 0.
-//* if they have no values or they are not at the same size - it prints an error to the user.
-// * @param vec1 - the first vector.
-//* @param vec2 - the second vector.
-//*/
-
-//void checkingVec(vector<double>vec1, vector<double> vec2) {
-  //  if(vec1.size() > vec2.size() || vec2.size() > vec1.size()) {
-  //    cout << "The vectors are in different size!" << endl;
-    //  exit(0);
-    //} else if (vec1.size() == 0) {
-    //    cout << "No parameters added!" << endl;
-    //    exit(0);
-    //} else {
-    //    DistanceClass::getEucDis(vec1, vec2);
-    //    DistanceClass::getManDis(vec1, vec2);
-    //    DistanceClass::getChebDis(vec1, vec2);
-    //    DistanceClass::getCanDis(vec1, vec2);
-    //    DistanceClass::getMinkDis(vec1, vec2);
-//    }
-//}
-
 /**
  * this function checks that all the values in the vectors are numbers. if not - it prints an error to the user.
  * @param str1 - the values of the first vector.
