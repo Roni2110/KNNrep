@@ -95,11 +95,16 @@ void Knn::sortingByDistance(vector<pair<double,string>> vector){
  * @param pairs
  */
 void Knn::getSignificant(vector<pair<double, string>> pairs) {
-    int i;
-    std::map<string, double> map;
+    std::map<string, int> map;
+    int i, temp, max;
+    string res;
     for(i = 0; i < this->k; i++) {
-        map[pairs[i].second]++;
+        temp = map[pairs[i].second]++;
+        if(max < temp) {
+            max = temp;
+            res = map[pairs[i].second];
+        }
     }
-    cout << pairs[0].second << endl;
+    cout << res << endl;
 }
 
