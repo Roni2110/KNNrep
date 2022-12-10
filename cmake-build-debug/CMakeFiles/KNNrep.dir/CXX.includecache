@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/omern/CLionProjects/KNNrep/DistanceClass.h
+vector
+-
+
+/mnt/c/Users/omern/CLionProjects/KNNrep/Knn.cpp
+Knn.h
+/mnt/c/Users/omern/CLionProjects/KNNrep/Knn.h
+string
+-
+fstream
+-
+sstream
+-
+iostream
+-
+algorithm
+-
+map
+-
+
+/mnt/c/Users/omern/CLionProjects/KNNrep/Knn.h
+DistanceClass.h
+/mnt/c/Users/omern/CLionProjects/KNNrep/DistanceClass.h
+string
+-
+
