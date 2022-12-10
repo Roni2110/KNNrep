@@ -18,21 +18,11 @@ double DistanceClass::getEucDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int power = 2;
     int i;
-    int value = 16;
     double res;
     for (i = 0; i < v1.size(); i++) {
         sum += pow(v1.at(i) - v2.at(i), power);
     }
     res = sqrt(sum);
-//    if (res != (int) res) {
-//
-//        cout.precision(value);
-//        cout << fixed << res << endl;
-//    } else {
-//        value = 1;
-//        cout.precision(value);
-//        cout << fixed << res << endl;
-//    }
     return res;
 }
 
@@ -44,7 +34,6 @@ double DistanceClass::getEucDis(vector<double> v1, vector<double> v2) {
 double DistanceClass::getCanDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int i;
-    int value = 16;
     for (i = 0; i < v1.size(); i++) {
         if (abs(v1.at(i)) + abs(v2.at(i)) == 0) {
             cout << "Can not divide by zero!" << endl;
@@ -61,7 +50,6 @@ double DistanceClass::getCanDis(vector<double> v1, vector<double> v2) {
  */
 double DistanceClass::getChebDis(vector<double> v1, vector<double> v2) {
     int i;
-    int value = 16;
     double max = abs(v1.at(0) - v2.at(0));
     for (i = 1; i < v1.size(); i++) {
         if (abs(v1.at(i) - v2.at(i)) > max) {
@@ -79,7 +67,6 @@ double DistanceClass::getChebDis(vector<double> v1, vector<double> v2) {
 double DistanceClass::getManDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int i;
-    int value = 16;
     for (i = 0; i < v1.size(); i++) {
         sum += abs((v1.at(i) - v2.at(i)));
     }
@@ -94,7 +81,6 @@ double DistanceClass::getManDis(vector<double> v1, vector<double> v2) {
 double DistanceClass::getMinkDis(vector<double> v1, vector<double> v2) {
     double sum = 0;
     int i;
-    int value = 16;
     double res;
     for (i = 0; i < v1.size(); i++) {
         sum += pow(abs(v1.at(i) - v2.at(i)), p);

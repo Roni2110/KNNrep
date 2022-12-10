@@ -22,8 +22,9 @@ private:
 
 public:
     Knn(int k, string file, string disName, vector<double> v1);
-    void uploadFiles(string stringPath);
+    void uploadFiles();
     void pushingToPairs(vector<double> d1, vector<string> s1);
+    void getSignificant(vector<pair<double, string>> pairs);
 
 };
 #endif //KNNREP_KNN_H

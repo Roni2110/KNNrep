@@ -6,34 +6,10 @@
 #include <sstream>
 #include <cmath>
 #include <cstdlib>
-#include "DistanceClass.h"
 #include "Knn.h"
 
 using namespace std;
 
-// /**
-//* this function checks that the two vectors are at the same size.
-//* also, this function checks that that the vectors are not empty - that their size is not 0.
-//* if they have no values or they are not at the same size - it prints an error to the user.
-// * @param vec1 - the first vector.
-//* @param vec2 - the second vector.
-//*/
-
-//void checkingVec(vector<double>vec1, vector<double> vec2) {
-  //  if(vec1.size() > vec2.size() || vec2.size() > vec1.size()) {
-  //    cout << "The vectors are in different size!" << endl;
-    //  exit(0);
-    //} else if (vec1.size() == 0) {
-    //    cout << "No parameters added!" << endl;
-    //    exit(0);
-    //} else {
-    //    DistanceClass::getEucDis(vec1, vec2);
-    //    DistanceClass::getManDis(vec1, vec2);
-    //    DistanceClass::getChebDis(vec1, vec2);
-    //    DistanceClass::getCanDis(vec1, vec2);
-    //    DistanceClass::getMinkDis(vec1, vec2);
-//    }
-//}
 
 /**
  * this function checks that all the values in the vectors are numbers. if not - it prints an error to the user.
@@ -59,7 +35,7 @@ vector<double> checkingInput(string str1) {
 }
 
 /**
- * this function checks that the arguments that the user entered to main are valids.
+ * this function checks that the arguments that the user entered to main are valid.
  * if not - it prints an error to the user.
  * @param argv - the arguments that the user entered.
  */
@@ -88,7 +64,8 @@ int main (int argc, char *argv[]) {
         input1 = input1.substr(0, sizeof(double));
     }
     vecInput = checkingInput(input1);
-    Knn* knn = new Knn(k,file,dis, vecInput);
-    knn->uploadFiles(file);
+    Knn* knn = new Knn(3,"iris_classified.csv","MAN", vecInput);
+    knn->uploadFiles();
+    delete knn;
     return 0;
 }
