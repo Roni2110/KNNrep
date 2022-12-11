@@ -49,7 +49,7 @@ void Knn::uploadFiles(std::string stringPath) {
         //checking if the vector in data in the same size a vector input
         if(temp.size() != vecInput.size()) {
             cout << "vectors are not in the same size!" << endl;
-            exit(0);
+            return;
         }
         //calling the distance method according to disName
         if(this->disName == "MAN") {

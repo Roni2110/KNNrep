@@ -16,7 +16,7 @@ using namespace std;
  * @param str1 - the values of the first vector.
  * @param str2 - the values of the second vector.
  */
-vector<double> checkingInput(string str1) {
+vector<double> checkingInput(string str1, int* flag) {
     vector<double> v1;
     double num;
     stringstream stringstream1(str1);
@@ -25,11 +25,11 @@ vector<double> checkingInput(string str1) {
     }
     if(!stringstream1.eof()) {
         cout << "Input not valid!" << endl;
-        exit(0);
+        *flag = 1;
     }
     if (v1.empty()) {
         cout << "No parameters added!" << endl;
-        exit(0);
+        *flag = 1;
     }
     return v1;
 }
@@ -53,18 +53,23 @@ void checkingArgv(char *argv[]) {
  * @return 0 if code works.
  */
 int main (int argc, char *argv[]) {
+    int* flag = 0;
     vector<double> vecInput;
     checkingArgv(argv);
     int k = stoi(argv[1]);
     string file = argv[2];
     string dis = argv[3];
     string input1;
-    getline(cin,input1);
-    if((double)input1.size() >= log(DBL_MAX) - 1) {
-        input1 = input1.substr(0, sizeof(double));
+    while (true) {
+        getline(cin, input1);
+        if ((double) input1.size() >= log(DBL_MAX) - 1) {
+            input1 = input1.substr(0, sizeof(double));
+        }
+        vecInput = checkingInput(input1, flag);
+        if(*flag!=1) {
+            Knn *knn = new Knn(k, dis, vecInput);
+            knn->uploadFiles(file);
+        }
     }
-    vecInput = checkingInput(input1);
-    Knn* knn = new Knn(k,dis, vecInput);
-    knn->uploadFiles(file);
     return 0;
 }
