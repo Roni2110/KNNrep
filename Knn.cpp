@@ -10,10 +10,10 @@
 using namespace std;
 
 /**
- *
- * @param k
- * @param disName
- * @param v1
+ * constructor.
+ * @param k - the k nearest neighbors.
+ * @param disName - the distance we want to calculate by.
+ * @param v1 - input from the user.
  */
 Knn::Knn(int k, string disName, vector<double> v1) {
     this->k = k;
@@ -22,8 +22,11 @@ Knn::Knn(int k, string disName, vector<double> v1) {
 }
 
 /**
- *
- * @param stringPath
+ * uploadFiles - getting all data from path we get from the user.
+ * each raw we put in a double vector - and calculating the distance from vector input.
+ * every raw - in his last column has the name of the vector - putting it in a string vector.
+ * lastly, we have two vectors - on with the distances, and one with the name.
+ * @param stringPath - the path to the data we want to upload.
  */
 void Knn::uploadFiles(std::string stringPath) {
     double res;
@@ -70,9 +73,9 @@ void Knn::uploadFiles(std::string stringPath) {
 }
 
 /**
- *
- * @param d1
- * @param s1
+ * pushing the vectors (double, string) to one pair vector.
+ * @param d1 - double vector with the distances.
+ * @param s1 - string vector with the names.
  */
 void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
     for(int i = 0; i < d1.size(); i++) {
@@ -82,8 +85,8 @@ void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
 }
 
 /**
- *
- * @param vector
+ * sorting the pair vector.
+ * @param vector - pair vector with distance and name.
  */
 void Knn::sortingByDistance(vector<pair<double,string>> vector){
     sort(vector.begin(), vector.end());
@@ -91,8 +94,8 @@ void Knn::sortingByDistance(vector<pair<double,string>> vector){
 }
 
 /**
- *
- * @param pairs
+ * get the significant label from the k nearest neighbors.
+ * @param pairs - sorted pair vector with distance and name.
  */
 void Knn::getSignificant(vector<pair<double, string>> pairs) {
     std::map<string, int> map;
