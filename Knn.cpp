@@ -46,6 +46,7 @@ void Knn::uploadFiles(std::string stringPath) {
                 temp.push_back(stod(tempByComma));
             }
         }
+        //checking if the vector in data in the same size a vector input
         if(temp.size() != vecInput.size()) {
             cout << "vectors are not in the same size!" << endl;
             exit(0);
@@ -66,6 +67,10 @@ void Knn::uploadFiles(std::string stringPath) {
         } else {
             res = DistanceClass::getMinkDis(temp, vecInput);
             doubleVec.push_back(res);
+        }
+        if(doubleVec.size() != stringVec.size()) {
+            cout << "The vector in the file is invalid" << endl;
+            exit(0);
         }
     }
     fin.close();
