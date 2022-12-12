@@ -40,10 +40,10 @@ vector<double> checkingInput(string str1, int* flag) {
 }
 
 /**
- * check that the arguments that the user entered to main are valid
+ * check that the arguments in the line command are valid
  * (that k is an positive number and that the distance is one of the distance options from the previous exercise).
  * if not - it prints an error to the user and exit the code.
- * @param argv - the arguments that the user entered.
+ * @param argv - the arguments in the line command.
  */
 void checkingArgv(char *argv[]) {
     if((stoi(argv[1])<=0) ||
@@ -55,7 +55,8 @@ void checkingArgv(char *argv[]) {
 }
 
 /**
- * the main function - get the vector from the user, check validate and call the knn methods.
+ * the main function - get arguments from the line command and a vector from the user,
+ * check validate and call the knn methods.
  * @param argc - the number of the values in argv.
  * @param argv - the values that the user added - k - the k nearest neighbors, file - the file with all the vector
  * for comparing, and distance - the distance method that the user want to compare by.
@@ -63,7 +64,7 @@ void checkingArgv(char *argv[]) {
 int main (int argc, char *argv[]) {
     int* flag = 0;
     vector<double> vecInput;
-    //checking that the arguments that the user entered are valid.
+    //checking that the arguments in the line command are valid.
     checkingArgv(argv);
     int k = stoi(argv[1]);
     string file = argv[2];
