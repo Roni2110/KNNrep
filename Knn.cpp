@@ -90,7 +90,7 @@ void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
 }
 
 /**
- * sorting the pair vector.
+ * sorting the pair vector by distance in ascending order.
  * @param vector - pair vector with distance and name.
  */
 void Knn::sortingByDistance(vector<pair<double,string>> vector){
