@@ -68,6 +68,8 @@ void Knn::uploadFiles(std::string stringPath) {
             res = DistanceClass::getMinkDis(temp, vecInput);
             doubleVec.push_back(res);
         }
+        //check that the distance vector is at the same size as the string vector - if not the file is not proper
+        //,so it exit the code.
         if(doubleVec.size() != stringVec.size()) {
             cout << "The vector in the file is invalid" << endl;
             exit(0);
