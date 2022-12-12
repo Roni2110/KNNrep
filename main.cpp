@@ -58,7 +58,7 @@ void checkingArgv(char *argv[]) {
  * the main function - get arguments from the line command and a vector from the user,
  * check validate and call the knn methods.
  * @param argc - the number of the values in argv.
- * @param argv - the values that the user added - k - the k nearest neighbors, file - the file with all the vector
+ * @param argv - the arguments in the line command - k - the k nearest neighbors, file - the file with all the vector
  * for comparing, and distance - the distance method that the user want to compare by.
  */
 int main (int argc, char *argv[]) {
