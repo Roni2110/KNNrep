@@ -49,7 +49,7 @@ void Knn::uploadFiles(std::string stringPath) {
         //checking if the vector in data in the same size a vector input
         if(temp.size() != vecInput.size()) {
             cout << "vectors are not in the same size!" << endl;
-            exit(0);
+            return;
         }
         //calling the distance method according to disName
         if(this->disName == "MAN") {
@@ -90,7 +90,7 @@ void Knn::pushingToPairs(vector<double> d1, vector<std::string> s1) {
 }
 
 /**
- * sorting the pair vector.
+ * sorting the pair vector by distance in ascending order.
  * @param vector - pair vector with distance and name.
  */
 void Knn::sortingByDistance(vector<pair<double,string>> vector){

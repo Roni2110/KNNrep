@@ -12,31 +12,37 @@
 using namespace std;
 
 /**
- * this function checks that all the values in the vectors are numbers. if not - it prints an error to the user.
- * @param str1 - the values of the first vector.
- * @param str2 - the values of the second vector.
+ * check that the user added values and that all the values are numbers.
+ * if not - it prints an error to the user and changes a flag so later the code will not go to the knn part.
+ * @param str1 - the vector from the user.
+ * @param flag - an indicator for the validate of the vector.
+ * @return the values that the user entered in a vector.
  */
-vector<double> checkingInput(string str1) {
+vector<double> checkingInput(string str1, int* flag) {
     vector<double> v1;
     double num;
     stringstream stringstream1(str1);
+    //entering the numbers into a vector.
     while(stringstream1 >> num) {
         v1.push_back(num);
     }
+    //checking if it is the end of the values that the user entered. if it is not the end - the input is not valid.
     if(!stringstream1.eof()) {
         cout << "Input not valid!" << endl;
-        exit(0);
+        *flag = 1;
     }
+    //checking that the user added values.
     if (v1.empty()) {
         cout << "No parameters added!" << endl;
-        exit(0);
+        *flag = 1;
     }
     return v1;
 }
 
 /**
- * this function checks that the arguments that the user entered to main are valids.
- * if not - it prints an error to the user.
+ * check that the arguments that the user entered to main are valid
+ * (that k is an positive number and that the distance is one of the distance options from the previous exercise).
+ * if not - it prints an error to the user and exit the code.
  * @param argv - the arguments that the user entered.
  */
 void checkingArgv(char *argv[]) {
@@ -49,22 +55,32 @@ void checkingArgv(char *argv[]) {
 }
 
 /**
- * this if the main function. this function calls the other functions and checks if the input does not cause an overflow.
- * @return 0 if code works.
+ * the main function - get the vector from the user, check validate and call the knn methods.
+ * @param argc - the number of the values in argv.
+ * @param argv - the values that the user added - k - the k nearest neighbors, file - the file with all the vector
+ * for comparing, and distance - the distance method that the user want to use compare by.
  */
 int main (int argc, char *argv[]) {
+    int* flag = 0;
     vector<double> vecInput;
+    //checking that the arguments that the user entered are valid.
     checkingArgv(argv);
     int k = stoi(argv[1]);
     string file = argv[2];
     string dis = argv[3];
     string input1;
-    getline(cin,input1);
-    if((double)input1.size() >= log(DBL_MAX) - 1) {
-        input1 = input1.substr(0, sizeof(double));
+    while (true) {
+        //getting a vector from the user.
+        getline(cin, input1);
+        if ((double) input1.size() >= log(DBL_MAX) - 1) {
+            input1 = input1.substr(0, sizeof(double));
+        }
+        //check if the vector that the user entered is valid.
+        vecInput = checkingInput(input1, flag);
+        if(*flag!=1) {
+            //calling knn methods.
+            Knn *knn = new Knn(k, dis, vecInput);
+            knn->uploadFiles(file);
+        }
     }
-    vecInput = checkingInput(input1);
-    Knn* knn = new Knn(k,dis, vecInput);
-    knn->uploadFiles(file);
-    return 0;
 }
