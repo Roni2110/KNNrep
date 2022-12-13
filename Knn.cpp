@@ -36,6 +36,7 @@ void Knn::uploadFiles(std::string stringPath) {
     //open an existing file
     fin.open(stringPath);
     if(!fin.is_open()) {
+        cout << "Cant open file" << endl;
         exit(0);
     }
     //getting data from file into two vectors
