@@ -23,10 +23,13 @@ For executing the code we need to run the following command:
 make
 
 The program will run as follow:
-a.out k file distance
+./a.out k file distance
+
+and then insert inputVec
 
 For example:
-a.out 3 iris_classified.csv MAN
+./a.out 3 iris_classified.csv MAN
+1 2 3 4 
 Will uplaod iris_classified vectors and calulate Manhattan ditance between each one of the vectors and the input vector,
 get the 3 closes neighbors - by sorting the distance vector and the name of the specific topic, and get the most significant topic in the k neighbors.
 We will print the correct classified topic, and get an infinte input from user all over again.
