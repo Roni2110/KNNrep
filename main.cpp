@@ -18,7 +18,7 @@ using namespace std;
  * @param flag - an indicator for the validate of the vector.
  * @return the values that the user entered in a vector.
  */
-vector<double> checkingInput(string str1, int* flag) {
+vector<double> checkingInput(string str1, int& flag) {
     vector<double> v1;
     double num;
     stringstream stringstream1(str1);
@@ -29,12 +29,12 @@ vector<double> checkingInput(string str1, int* flag) {
     //checking if it is the end of the values that the user entered. if it is not the end - the input is not valid.
     if(!stringstream1.eof()) {
         cout << "Input not valid!" << endl;
-        *flag = 1;
+        flag = 1;
     }
     //checking that the user added values.
     if (v1.empty()) {
         cout << "No parameters added!" << endl;
-        *flag = 1;
+        flag = 1;
     }
     return v1;
 }
@@ -62,7 +62,7 @@ void checkingArgv(char *argv[]) {
  * for comparing, and distance - the distance method that the user want to compare by.
  */
 int main (int argc, char *argv[]) {
-    int* flag = 0;
+    int flag = 0;
     vector<double> vecInput;
     //checking that the arguments in the line command are valid.
     checkingArgv(argv);
@@ -77,11 +77,12 @@ int main (int argc, char *argv[]) {
             input1 = input1.substr(0, sizeof(double));
         }
         //check if the vector that the user entered is valid.
-        vecInput = checkingInput(input1, flag);
-        if(*flag!=1) {
+        vecInput = checkingInput(input1,flag);
+        if(flag!=1) {
             //calling knn methods.
             Knn *knn = new Knn(k, dis, vecInput);
             knn->uploadFiles(file);
         }
+        flag = 0;
     }
 }
