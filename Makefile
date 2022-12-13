@@ -7,7 +7,7 @@ main.o: main.cpp
 Knn.o: Knn.cpp Knn.h
 		g++ -std=c++11 -c Knn.cpp
 
-DistanceCladd.o: DistanceClass.cpp DistanceClass.h
+DistanceClass.o: DistanceClass.cpp DistanceClass.h
 		g++ -std=c++11 -c DistanceClass.cpp
 
 clean: rm *.o a.out
