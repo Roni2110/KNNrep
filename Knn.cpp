@@ -35,8 +35,11 @@ void Knn::uploadFiles(std::string stringPath) {
     fstream fin;
     //open an existing file
     fin.open(stringPath);
+    if(!fin.is_open()) {
+        exit(0);
+    }
     //getting data from file into two vectors
-    while(fin >> tempByLine) {
+    while(getline(fin, tempByLine)) {
         stringstream ss(tempByLine);
         vector<double> temp;
         while(getline(ss, tempByComma, ',')) {
