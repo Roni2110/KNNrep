@@ -6,7 +6,6 @@
 #include <sstream>
 #include <cmath>
 #include <cstdlib>
-#include "DistanceClass.h"
 #include "Knn.h"
 
 using namespace std;
