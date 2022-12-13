@@ -76,6 +76,11 @@ void Knn::uploadFiles(std::string stringPath) {
         }
     }
     fin.close();
+    //checking if k given in bigger then vectors
+    if(this->k > doubleVec.size()) {
+        cout << "K is bigger then the vectors in file!" << endl;
+        exit(0);
+    }
     pushingToPairs(doubleVec, stringVec);
 }
 
