@@ -81,6 +81,7 @@ int main (int argc, char *argv[]) {
             //calling knn methods.
             Knn *knn = new Knn(k, dis, vecInput);
             knn->uploadFiles(file);
+            delete knn;
         }
         flag = 0;
     }
